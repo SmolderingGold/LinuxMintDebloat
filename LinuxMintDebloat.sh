@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "=== Starting Deep Debloat ===" && \
+echo "===→ Starting Deep Debloat ←===" && \
 sudo apt purge --autoremove -y \
   libreoffice-common libreoffice-core \
   thunderbird \
@@ -21,4 +21,4 @@ sudo systemctl stop bluetooth.service 2>/dev/null && \
 sudo systemctl disable bluetooth.service 2>/dev/null && \
 sudo systemctl mask bluetooth.service 2>/dev/null && \
 echo "" && \
-echo "=== Debloat Complete! ==="
+echo "===→ Debloat Complete! ←==="

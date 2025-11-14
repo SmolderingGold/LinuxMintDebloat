@@ -1,5 +1,7 @@
 #!/bin/bash
+
 echo "===→ Starting Deep Debloat ←===" && \
+
 sudo apt purge --autoremove -y \
   libreoffice-common libreoffice-core \
   thunderbird \
@@ -15,10 +17,14 @@ sudo apt purge --autoremove -y \
   cups-core-drivers cups-daemon cups-ppdc cups-server-common \
   printer-driver-* hplip \
   firefox firefox-locale-* 2>/dev/null && \
+
 sudo apt autoremove -y && \
 sudo apt autoclean && \
+
 sudo systemctl stop bluetooth.service 2>/dev/null && \
 sudo systemctl disable bluetooth.service 2>/dev/null && \
 sudo systemctl mask bluetooth.service 2>/dev/null && \
+
 echo "" && \
+
 echo "===→ Debloat Complete! ←==="
